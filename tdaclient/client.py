@@ -1,16 +1,26 @@
 import requests
+import os
 
-class tdaclient:
+class TDAClient:
 
     def __init__(self, client_id):
+        # need to initialize with client_id found in developer account settings
         self.client_id = client_id
         self.access_token = None
+        self.url = "https://api.tdameritrade.com/v1/"
 
     def get_access_token(self):
-        refresh_token_file = open("tokeninfo.txt", "r")
+        # implement refresh token method for getting access token
+        # will need to implement method for refreshing refresh token (90 day expiration)
+        # reliant on a tokeninfo.txt containing the refresh token to exist in on-da-dip/tdaclient within the server
+
+        cwd = os.getcwd()
+        dir = os.path.dirname(cwd)
+        refresh_token_file = open(dir + "/tokeninfo.txt", "r")
         refresh_token = refresh_token_file.readline()
         refresh_token_file.close()
-        endpoint = "https://api.tdameritrade.com/v1/oauth2/token"
+
+        endpoint = self.url + "oauth2/token"
         grant_type = "refresh_token"
         access_type = "offline"
 
@@ -26,17 +36,36 @@ class tdaclient:
         if result.status_code == 200:
             result_body = result.json()
             self.access_token = result_body["access_token"]
-        elif 401:
+
+            cwd = os.getcwd()
+            dir = os.path.dirname(cwd)
+            refresh_token_file = open(dir + "/tokeninfo.txt", "wt")
+            # need to update token file with latest refresh token
+            refresh_token_file.write(result_body["refresh_token"])
+            refresh_token_file.close()
+
+        elif result.status_code == 401:
             print("Invalid credentials.")
-        elif 403:
+        elif result.status_code == 403:
             print("User doesn't have access to this account and/or permissions.")
-        elif 400:
+        elif result.status_code == 400:
             print("Validation unsuccessful.  Check that client id and refresh tokens are correct.")
-        elif 500:
+        elif result.status_code == 500:
             print("Server error, try again later.")
         else:
             print("Unknown error.")
 
-client = tdaclient("SZKIIQY0STUI4WGFAQCVLOBJANB61M0H")
-client.get_access_token()
-print(client.access_token)
+    def get_quote(self, symbol):
+        endpoint = self.url + "marketdata/" + symbol + "/quotes"
+
+        headers = {
+            "Authorization": "Bearer " + self.access_token
+        }
+
+        data = {
+            "apikey": self.client_id
+        }
+
+        result = requests.get(url=endpoint, data=data, headers=headers)
+        return result
+
