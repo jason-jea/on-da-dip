@@ -1,6 +1,7 @@
 import requests
 import os
 
+
 class TDAClient:
 
     def __init__(self, client_id):
