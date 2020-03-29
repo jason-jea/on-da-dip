@@ -1,2 +1,5 @@
 tokeninfo.txt
 tdaclient/tokeninfo.txt
+.idea
+*.pyc
+*.pyo
