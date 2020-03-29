@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5858813d-8295-4dfd-8020-574c97f0778b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/quotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/quotes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/tda.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/tda.py" afterDir="false" />
-    </list>
+    <list default="true" id="5858813d-8295-4dfd-8020-574c97f0778b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +31,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/historical_quotes_analysis.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/platform/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -57,8 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -88,6 +89,7 @@
         <option value="$PROJECT_DIR$/clients/tda.py" />
         <option value="$PROJECT_DIR$/scripts/historical_quotes_analysis.ipynb" />
         <option value="$PROJECT_DIR$/scripts/historical_quotes.py" />
+        <option value="$PROJECT_DIR$/platform/__init__.py" />
       </list>
     </option>
   </component>
@@ -113,6 +115,11 @@
               <item name="on-da-dip" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-da-dip" type="462c0819:PsiDirectoryNode" />
               <item name="clients" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="on-da-dip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="on-da-dip" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="on-da-dip" type="b2602c69:ProjectViewProjectNode" />
@@ -240,7 +247,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12990000" />
+    <option name="totallyTimeSpent" value="13074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -321,6 +328,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/historical_quotes_analysis.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
