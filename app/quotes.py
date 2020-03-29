@@ -1,4 +1,4 @@
-import tdaclient.client as tda
+import clients.tda as tda
 
 
 def parse_quotes_response(result, symbol):
