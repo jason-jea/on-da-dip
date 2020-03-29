@@ -8,7 +8,7 @@ def parse_quotes_response(result, symbol):
         if symbol in response_body.keys():
             response_body = response_body[symbol]
             asset_type = response_body["assetType"]
-            description= response_body["description"]
+            description = response_body["description"]
             last_price = response_body["lastPrice"]
             msg = "Asset Type: " + asset_type + "\nDescription: " + description + "\nLast Price: " + str(last_price)
             print(msg)
