@@ -1,5 +1,8 @@
 import requests
 import os
+import time
+from datetime import datetime
+from calendar import timegm
 
 
 class TDAClient:
@@ -68,5 +71,34 @@ class TDAClient:
         }
 
         result = requests.get(url=endpoint, data=data, headers=headers)
+        return result
+
+    def get_quote_history(self, symbol, startdate=None, enddate=None):
+        # default is YTD
+        if startdate is None:
+            current_year = datetime.today().year
+            startdate = str(current_year) + "-01-01"
+        if enddate is None:
+            enddate = str(datetime.today().strftime("%Y-%m-%d"))
+
+        endpoint = self.url + "marketdata/" + symbol + "/pricehistory"
+
+        headers = {
+            "Authorization": "Bearer " + self.access_token
+        }
+
+        start_converted = timegm(time.strptime(startdate + "T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"))*1000
+        end_converted = timegm(time.strptime(enddate + "T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"))*1000
+
+        data = {
+            "apikey": self.client_id,
+            "startDate": start_converted,
+            "endDate": end_converted,
+            "periodType": "year",
+            "frequencyType": "daily",
+            "frequency": 1
+        }
+
+        result = requests.get(url=endpoint, params=data, headers=headers)
         return result
 

@@ -19,8 +19,8 @@ def parse_quotes_response(result, symbol):
 client = tda.TDAClient("SZKIIQY0STUI4WGFAQCVLOBJANB61M0H")
 client.get_access_token()
 
-symbol = "SPY"
-quote_results = client.get_quote(symbol)
+symb = "SPY"
+quote_results = client.get_quote(symb)
 
-parse_quotes_response(quote_results, symbol)
+parse_quotes_response(quote_results, symb)
 
