@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5858813d-8295-4dfd-8020-574c97f0778b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tdaclient/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tdaclient/client.py" afterDir="false" />
-    </list>
+    <list default="true" id="5858813d-8295-4dfd-8020-574c97f0778b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/quotes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="360">
+              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -83,6 +81,11 @@
             <path>
               <item name="on-da-dip" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-da-dip" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="on-da-dip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="on-da-dip" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="on-da-dip" type="b2602c69:ProjectViewProjectNode" />
@@ -181,16 +184,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585442576928</updated>
-      <workItem from="1585442578126" duration="6849000" />
+      <workItem from="1585442578126" duration="7202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6849000" />
+    <option name="totallyTimeSpent" value="7202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
@@ -251,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/quotes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        <state relative-caret-position="360">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
