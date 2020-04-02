@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.username }}'s Portfolio</title>
+</head>
+<body>
+    <h3>{{ user.username }}'s Portfolio</h3>
+    {% if portfolio_securities_list %}
+        <ul>
+        {% for security in portfolio_securities_list %}
+            <li><a href="{% url 'core:security' security.security.id %}">{{ security.security.symbol }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No securities in your portfolio.</p>
+    {% endif %}
+</body>
+</html>

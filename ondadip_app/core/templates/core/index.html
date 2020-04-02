@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to On Da Dip</title>
+</head>
+<body>
+    <h3>Welcome to On Da Dip.</h3>
+    {% if latest_securities_list %}
+        <ul>
+        {% for security in latest_securities_list %}
+            <li><a href="{% url 'core:security' security.id %}">{{ security.symbol }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No securities are available.</p>
+    {% endif %}
+</body>
+</html>

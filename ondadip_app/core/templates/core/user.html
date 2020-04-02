@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On Da Dip: {{ user.username }}'s portfolio</title>
+</head>
+<body>
+    <h1>On Da Dip: {{ user.username }}'s portfolio</h1>
+    <ul>
+        <li><a href="{% url 'core:portfolio' user.id %}">Portfolio</a></li>
+    </ul>
+</body>
+</html>
