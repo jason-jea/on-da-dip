@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Updated</title>
+</head>
+<body>
+    <h1>Updated {{ user.username }}'s portfolio:</h1>
+
+    <ul>
+    {% for security in user.portfolio_security.all %}
+        <li>{{ security.security.symbol }} - added {{ security.created_at }} </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'core:portfolio' user.id %}">Add another?</a>
+</body>
+</html>

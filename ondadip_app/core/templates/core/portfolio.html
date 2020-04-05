@@ -6,14 +6,26 @@
 </head>
 <body>
     <h3>{{ user.username }}'s Portfolio</h3>
-    {% if portfolio_securities_list %}
+    {% if user %}
         <ul>
-        {% for security in portfolio_securities_list %}
+        {% for security in user.portfolio_security.all %}
             <li><a href="{% url 'core:security' security.security.id %}">{{ security.security.symbol }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
         <p>No securities in your portfolio.</p>
     {% endif %}
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="{% url 'core:security_add' user.id %}" method="post">
+    {% csrf_token %}
+    {% for security in securities %}
+        <input type="radio" name="security" id="security{{ forloop.counter }}" value="{{ security.id }}">
+        <label for="security{{ forloop.counter }}">{{ security.symbol }}</label><br>
+    {% endfor %}
+    <input type="submit" value="Add">
+    </form>
+
 </body>
 </html>
